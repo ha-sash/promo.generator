@@ -1,0 +1,7 @@
+{
+  promocodeGeneratorPlaceholders: {
+    'A': 'ABCDEFGHJKLMNPQRSTUVWXYZ',
+    '9': '123456789',
+    '#': 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789',
+  },
+}
