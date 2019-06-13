@@ -2,7 +2,7 @@ import { get, has } from 'config';
 
 export class PromoGenerator {
 
-  public combinations = 0;
+  private combinations = 0;
 
   private cache: any = {};
   private digits: number[] = [];
@@ -35,6 +35,10 @@ export class PromoGenerator {
       }
     }
     return result;
+  }
+
+  public getCombinations(): number {
+    return this.combinations;
   }
 
   public getPosition(): number {

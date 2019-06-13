@@ -5,11 +5,11 @@ The library allows you to generate promotional codes. You can start from any pos
 Example:
 ```typescript
 import { info } from 'console';
-import { PromoGenerator } from 'promo.generator';
+import { PromoGenerator } from '@sash/promo.generator';
 
 const cr = new PromoGenerator('#####9', 35221);
 
-info(`number of combinations: ${cr.combinations}`);
+info(`number of combinations: ${cr.getCombinations()}`);
 info(`CODE: ${cr.next()}`);
 info(`CODE: ${cr.next()}`);
 info(`CODE: ${cr.next()}`);
@@ -22,4 +22,21 @@ info(`CODE: ${cr.next()}`);
 
 ```
 
-In the case of JavaScript, it looks about the same, probably.
+```javascript
+const { info } = require('console');
+const { PromoGenerator } = require('@sash/promo.generator');
+
+const cr = new PromoGenerator('#####9', 35221);
+
+info(`number of combinations: ${cr.getCombinations()}`);
+info(`CODE: ${cr.next()}`);
+info(`CODE: ${cr.next()}`);
+info(`CODE: ${cr.next()}`);
+
+// result
+// number of combinations: 352218537
+// CODE: AADVV5
+// CODE: AADVV6
+// CODE: AADVV7
+
+```
